@@ -2,44 +2,62 @@
 <html>
 <head>
     <title></title>
-    <style type="text/css"> 
-    .header {
-        position: relative;
-        text-align: center;
-        top: .5em;
-        font-size: 3em;
-        font-family: Segoe UI Light;
-    }
-    .contentBox{
-        position: relative;
-        text-align: center;
-        margin: auto;
-        cursor: pointer;
-        border-radius: 8px;
-        top: 8em;
-        height: 80%;
-        width: 80%;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
-        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .contentBox:hover{
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, .2);
-    }
-    .content{
-        position: relative;
-        font-size: 2em;
-        font-family: Segoe UI Light;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="resources/CSS/common.css">
 </head>
 <body>
 <div class="header">
-    <span>Hello there =)</span>
+    <span>MY PROJECTS:</span>
 </div>
-<div class="contentBox" onclick="window.open('https://en.wikipedia.org/wiki/Lorem_ipsum', '_blank');">
-    <div style="padding: 3px;">
-        <span class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est aborum.</span>
+<div class="projects">
+    <div id="ProjectGaussianBlurInfo" class="projectBox" onclick="window.open('https://github.com/Nk185/GaussianBlur/blob/master/Presenation/GaussianBlur%20(lite)%20Final.pdf', '_blank');">
+        <div class="projectIconBox"><img src="resources/images/Projects/GaussianBlur.png"></div>
+        <div class="projectDescriptionBox">
+            <div id="ProjectTitle">
+                <span>INFO: GAUSSIAN BLUR</span>
+            </div>
+            <div id="ProjectDescription" style="text-align: justify;">
+                <span>Mathematical explanation of gaussian blur mechanisms. And in general how it work. Also power point presentation is available.</span>
+            </div>       
+        </div>
     </div>
+    <div id="ProjectGaussianBlur" class="projectBox" onclick="window.open('https://github.com/Nk185/GaussianBlur', '_blank');">
+        <div class="projectIconBox"><img src="resources/images/Projects/GaussianBlur.png"></div>
+        <div class="projectDescriptionBox">
+            <div id="ProjectTitle">
+                <span>APP: GAUSSIAN BLUR</span>
+            </div>
+            <div id="ProjectDescription" style="text-align: justify;">
+                <span>This application, written on C#, demonstrates how works gaussian blur. For calculations, app uses a CPU, but GPU version is currently in developing. Application was written to demonstrate a practical implementation of gaussian distribution formulas in case of graphic.</span>
+            </div>       
+        </div>
+    </div>
+    <div id="ProjectBattleShipConsole" class="projectBox" onclick="window.open('https://github.com/Nk185/Battleship_Console', '_blank');">
+        <div class="projectIconBox"><img src="resources/images/Projects/Battleship.png"></div>
+        <div class="projectDescriptionBox">
+            <div id="ProjectTitle">
+                <span>CONSOLE GAME: BATTLESHIP</span>
+            </div>
+            <div id="ProjectDescription" style="text-align: justify;">
+                <span>A simple version of battleship game, written on Java in like two-three days. In this version only console interface of I/O is available. Application contains middle-level logic of enemy, so it will be not so boring to play in.</span>
+            </div>       
+        </div>
+    </div>
+    <div id="ProjectBattleShip" class="projectBox" onclick="window.open('https://github.com/Nk185/Battleship', '_blank');">
+        <div class="projectIconBox"><img src="resources/images/Projects/BattleshipGUI.png"></div>
+        <div class="projectDescriptionBox">
+            <div id="ProjectTitle">
+                <span>GAME: BATTLESHIP</span>
+            </div>
+            <div id="ProjectDescription" style="text-align: justify;">
+                <span>An extended version of console game. Here available GUI and animations. Also here will be improved enemy logic so it will be quite hard to win. This version is still in process.</span>
+            </div>       
+        </div>
+    </div>
+</div>
+<div class="feedbackBox">
+    <div class="feedback" id="FeedbackVK" onclick="window.open('https://new.vk.com/nikita185','_blank');"></div>
+    <div class="feedback" id="FeedbackLinkedIn" onclick="window.open('https://ua.linkedin.com/in/nk185/en','_blank');"></div>
+    <div class="feedback" id="FeedbackEmail" onclick="location.href = 'mailto:TheNik185@yandex.ua';"></div>
 </div>
 </body>
 </html>

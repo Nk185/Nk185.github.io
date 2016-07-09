@@ -1,0 +1,119 @@
+    body{
+        background-color: rgb(247, 247, 247);
+    }
+    .header {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 1em;        
+        font-size: 3em;
+        font-family: Segoe UI Light;
+    }
+
+    .projects{
+        position: absolute;
+        text-align: center;
+        width: 70%;
+        top: 150px;
+        left: 15%;
+        padding-bottom: 90px;    
+    }
+
+    .projectBox{
+        position: relative;
+        display: inline-block;        
+        cursor: pointer;
+        vertical-align: top;
+        max-width: 350px;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 2em;
+        background-color: rgb(66, 133, 244);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .projectBox:hover{
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, .5);
+    }
+    .projectBox:active{
+        background-color: rgb(62, 129, 240);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    }
+    .projectDescriptionBox{
+        position: relative;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 6px;
+        top: 0em;
+        width: 90%;
+    }
+    #ProjectTitle{
+        position: relative;
+        color: white;
+        font-size: 2em;
+        font-family: Segoe UI Semilight;
+    }
+    #ProjectDescription{
+        position: relative;
+        color: white;
+        font-size: 1em;
+        font-family: Segoe UI Light;
+    }
+    .projectIconBox{
+        position: relative;
+        text-align: center;
+        padding-top: 6px;
+    }
+    .feedbackBox{
+        position: fixed;
+        right: 1em;
+        bottom: 1em;
+    }
+    .feedback{
+        position: relative;
+        display: block;
+        cursor: pointer;
+        margin-top: 1em;
+        border-radius: 100px;
+        border: 0em;
+        width: 5em;
+        height: 5em;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+        transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+    }
+    .feedback:hover{
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, .6);    
+    }
+    .feedback:active{
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .5); 
+        width: 5.5em;
+        height: 5.5em;
+    }
+    #FeedbackVK{
+        background: url("../images/Social/VK.png"); 
+        background-size: 5em 5em; 
+        background-color: rgb(80, 114, 153);
+    }
+    #FeedbackLinkedIn{
+        background: url(../images/Social/LinkedIn.png);
+        background-size: 5em 5em; 
+        background-color: rgb(28, 135, 189);
+    }
+    #FeedbackEmail{
+        background: url("../images/Social/Email.png"); 
+        background-size: 5em 5em; 
+        background-color: rgb(39, 136, 197);
+    }
+    #FeedbackVK:active{
+        background-size: 5.5em 5.5em;
+    }
+    #FeedbackLinkedIn:active{
+        background-size: 5.5em 5.5em;
+    }
+    #FeedbackEmail:active{
+        background-size: 5.5em 5.5em;
+    }
