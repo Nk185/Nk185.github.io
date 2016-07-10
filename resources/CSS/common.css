@@ -1,29 +1,36 @@
-    body{
+    html, body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
         background-color: rgb(247, 247, 247);
     }
+    #wrapper{
+        position: relative;
+        min-height: 100%;
+    }
     .header {
-        position: absolute;
+        position: relative;
         text-align: center;
         width: 100%;
         top: 0;
         left: 0;
-        padding-top: 1em;        
+        padding-top: 1em;
+        padding-bottom: 1em;
         font-size: 3em;
         font-family: Segoe UI Light;
     }
 
     .projects{
-        position: absolute;
+        position: relative;
         text-align: center;
         width: 70%;
-        top: 150px;
         left: 15%;
-        padding-bottom: 90px;    
+        padding-bottom: 70px;
     }
 
     .projectBox{
         position: relative;
-        display: inline-block;        
+        display: inline-block;
         cursor: pointer;
         vertical-align: top;
         max-width: 350px;
@@ -35,6 +42,7 @@
         border-radius: 8px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
         transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        animation: slideTogather 1.5s cubic-bezier(.4, 0, .2, 1), _collapse 1.5s cubic-bezier(0, 0, .2, 1);
     }
     .projectBox:hover{
         box-shadow: 0px 4px 15px rgba(0, 0, 0, .5);
@@ -70,7 +78,8 @@
     }
     .feedbackBox{
         position: fixed;
-        right: 1em;
+        width: 200px;
+        right: 0em;
         bottom: 1em;
     }
     .feedback{
@@ -78,6 +87,7 @@
         display: block;
         cursor: pointer;
         margin-top: 1em;
+        left: 50%;        
         border-radius: 100px;
         border: 0em;
         width: 5em;
@@ -85,35 +95,45 @@
         box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
         transition: all 200ms cubic-bezier(.4, 0, .2, 1);
     }
-    .feedback:hover{
-        box-shadow: 0px 3px 5px rgba(0, 0, 0, .6);    
-    }
-    .feedback:active{
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, .5); 
-        width: 5.5em;
-        height: 5.5em;
-    }
-    #FeedbackVK{
+    .feedback.VK{
         background: url("../images/Social/VK.png"); 
         background-size: 5em 5em; 
         background-color: rgb(80, 114, 153);
+
+        animation: showUp 500ms cubic-bezier(0, 0, .2, 1) 1.5s;
+        animation-fill-mode: backwards;
     }
-    #FeedbackLinkedIn{
+    .feedback.In{
         background: url(../images/Social/LinkedIn.png);
         background-size: 5em 5em; 
         background-color: rgb(28, 135, 189);
+
+        animation: showUp 500ms cubic-bezier(0, 0, .2, 1) 1.6s;
+        animation-fill-mode: backwards;
     }
-    #FeedbackEmail{
+    .feedback.Email{
         background: url("../images/Social/Email.png"); 
         background-size: 5em 5em; 
         background-color: rgb(39, 136, 197);
+
+        animation: showUp 500ms cubic-bezier(0, 0, .2, 1) 1.7s;
+        animation-fill-mode: backwards;
     }
-    #FeedbackVK:active{
+    .feedback:hover{
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, .6);    
+    }
+    .feedback:active, .feedback.VK:active, .feedback.In:active, .feedback.Email:active{
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, .5); 
+        left: 48%;
+        width: 5.5em;
+        height: 5.5em;
         background-size: 5.5em 5.5em;
     }
-    #FeedbackLinkedIn:active{
-        background-size: 5.5em 5.5em;
-    }
-    #FeedbackEmail:active{
-        background-size: 5.5em 5.5em;
+    .footer{
+        position: relative; 
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+        height: 20px;
+        text-align: center;
     }

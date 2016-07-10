@@ -3,61 +3,68 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="resources/CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="resources/CSS/commonAnimations.css">
+    <script type="text/javascript" src="resources/JS/common.js"></script>
 </head>
 <body>
-<div class="header">
-    <span>MY PROJECTS:</span>
-</div>
-<div class="projects">
-    <div id="ProjectGaussianBlurInfo" class="projectBox" onclick="window.open('https://github.com/Nk185/GaussianBlur/blob/master/Presenation/GaussianBlur%20(lite)%20Final.pdf', '_blank');">
-        <div class="projectIconBox"><img src="resources/images/Projects/GaussianBlur.png"></div>
-        <div class="projectDescriptionBox">
-            <div id="ProjectTitle">
-                <span>INFO: GAUSSIAN BLUR</span>
+<div id="wrapper">
+    <div class="header">
+        <span>MY PROJECTS:</span>
+    </div>
+    <div class="projects">
+        <div id="ProjectGaussianBlurInfo" class="projectBox" onclick="window.open('https://github.com/Nk185/GaussianBlur/blob/master/Presenation/GaussianBlur%20(lite)%20Final.pdf', '_blank');">
+            <div class="projectIconBox"><img src="resources/images/Projects/GaussianBlur.png"></div>
+            <div class="projectDescriptionBox">
+                <div id="ProjectTitle">
+                    <span>INFO: GAUSSIAN BLUR</span>
+                </div>
+                <div id="ProjectDescription" style="text-align: justify;">
+                    <span>Mathematical explanation of gaussian blur mechanisms. And in general how it work. Also power point presentation is available.</span>
+                </div>       
             </div>
-            <div id="ProjectDescription" style="text-align: justify;">
-                <span>Mathematical explanation of gaussian blur mechanisms. And in general how it work. Also power point presentation is available.</span>
-            </div>       
+        </div>
+        <div id="ProjectGaussianBlur" class="projectBox" onclick="window.open('https://github.com/Nk185/GaussianBlur', '_blank');">
+            <div class="projectIconBox"><img src="resources/images/Projects/GaussianBlur.png"></div>
+            <div class="projectDescriptionBox">
+                <div id="ProjectTitle">
+                    <span>APP: GAUSSIAN BLUR</span>
+                </div>
+                <div id="ProjectDescription" style="text-align: justify;">
+                    <span>This application, written on C#, demonstrates how works gaussian blur. For calculations, app uses a CPU, but GPU version is currently in developing. Application was written to demonstrate a practical implementation of gaussian distribution formulas in case of graphic.</span>
+                </div>       
+            </div>
+        </div>
+        <div id="ProjectBattleShipConsole" class="projectBox" onclick="window.open('https://github.com/Nk185/Battleship_Console', '_blank');">
+            <div class="projectIconBox"><img src="resources/images/Projects/Battleship.png"></div>
+            <div class="projectDescriptionBox">
+                <div id="ProjectTitle">
+                    <span>CONSOLE GAME: BATTLESHIP</span>
+                </div>
+                <div id="ProjectDescription" style="text-align: justify;">
+                    <span>A simple version of battleship game, written on Java in like two-three days. In this version only console interface of I/O is available. Application contains middle-level logic of enemy, so it will be not so boring to play in.</span>
+                </div>       
+            </div>
+        </div>
+        <div id="ProjectBattleShip" class="projectBox" onclick="window.open('https://github.com/Nk185/Battleship', '_blank');">
+            <div class="projectIconBox"><img src="resources/images/Projects/BattleshipGUI.png"></div>
+            <div class="projectDescriptionBox">
+                <div id="ProjectTitle">
+                    <span>GAME: BATTLESHIP</span>
+                </div>
+                <div id="ProjectDescription" style="text-align: justify;">
+                    <span>An extended version of console game. Here available GUI and animations. Also here will be improved enemy logic so it will be quite hard to win. This version is still in process.</span>
+                </div>       
+            </div>
         </div>
     </div>
-    <div id="ProjectGaussianBlur" class="projectBox" onclick="window.open('https://github.com/Nk185/GaussianBlur', '_blank');">
-        <div class="projectIconBox"><img src="resources/images/Projects/GaussianBlur.png"></div>
-        <div class="projectDescriptionBox">
-            <div id="ProjectTitle">
-                <span>APP: GAUSSIAN BLUR</span>
-            </div>
-            <div id="ProjectDescription" style="text-align: justify;">
-                <span>This application, written on C#, demonstrates how works gaussian blur. For calculations, app uses a CPU, but GPU version is currently in developing. Application was written to demonstrate a practical implementation of gaussian distribution formulas in case of graphic.</span>
-            </div>       
-        </div>
+    <div class="feedbackBox">
+        <div class="feedback VK" id="FeedbackVK" onclick="window.open('https://new.vk.com/nikita185','_blank');"></div>
+        <div class="feedback In" id="FeedbackLinkedIn" onclick="window.open('https://ua.linkedin.com/in/nk185/en','_blank');"></div>
+        <div class="feedback Email" id="FeedbackEmail" onclick="location.href = 'mailto:TheNik185@yandex.ua';"></div>
     </div>
-    <div id="ProjectBattleShipConsole" class="projectBox" onclick="window.open('https://github.com/Nk185/Battleship_Console', '_blank');">
-        <div class="projectIconBox"><img src="resources/images/Projects/Battleship.png"></div>
-        <div class="projectDescriptionBox">
-            <div id="ProjectTitle">
-                <span>CONSOLE GAME: BATTLESHIP</span>
-            </div>
-            <div id="ProjectDescription" style="text-align: justify;">
-                <span>A simple version of battleship game, written on Java in like two-three days. In this version only console interface of I/O is available. Application contains middle-level logic of enemy, so it will be not so boring to play in.</span>
-            </div>       
-        </div>
+    <div class="footer">
+        <span style="font-family: Segoe UI; font-size: 0.8em; color: rgb(107, 107, 107);">&#169; 2016. Nk185.</span>
     </div>
-    <div id="ProjectBattleShip" class="projectBox" onclick="window.open('https://github.com/Nk185/Battleship', '_blank');">
-        <div class="projectIconBox"><img src="resources/images/Projects/BattleshipGUI.png"></div>
-        <div class="projectDescriptionBox">
-            <div id="ProjectTitle">
-                <span>GAME: BATTLESHIP</span>
-            </div>
-            <div id="ProjectDescription" style="text-align: justify;">
-                <span>An extended version of console game. Here available GUI and animations. Also here will be improved enemy logic so it will be quite hard to win. This version is still in process.</span>
-            </div>       
-        </div>
-    </div>
-</div>
-<div class="feedbackBox">
-    <div class="feedback" id="FeedbackVK" onclick="window.open('https://new.vk.com/nikita185','_blank');"></div>
-    <div class="feedback" id="FeedbackLinkedIn" onclick="window.open('https://ua.linkedin.com/in/nk185/en','_blank');"></div>
-    <div class="feedback" id="FeedbackEmail" onclick="location.href = 'mailto:TheNik185@yandex.ua';"></div>
 </div>
 </body>
 </html>
