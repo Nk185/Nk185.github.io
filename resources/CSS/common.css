@@ -1,10 +1,10 @@
-    html, body{
+    html, body {
         margin: 0;
         padding: 0;
         height: 100%;
         background-color: rgb(247, 247, 247);
     }
-    #wrapper{
+    #wrapper {
         position: relative;
         min-height: 100%;
     }
@@ -14,21 +14,25 @@
         width: 100%;
         top: 0;
         left: 0;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
         font-size: 3em;
-        font-family: Segoe UI Light;
+        font-family: "Segoe UI Light", "Segoe UI";
+        color: rgb(50, 50, 50);
+    }
+    _:-moz-tree-row(hover), .header { /* Firefox support */
+        font-weight: lighter;
     }
 
-    .projects{
+    .projects {
         position: relative;
         text-align: center;
         width: 70%;
         left: 15%;
-        padding-bottom: 70px;
+        padding-bottom: 25px;
     }
 
-    .projectBox{
+    .projectBox {
         position: relative;
         display: inline-block;
         cursor: pointer;
@@ -36,98 +40,132 @@
         max-width: 350px;
         margin-left: 1em;
         margin-right: 1em;
-        margin-bottom: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
         background-color: rgb(66, 133, 244);
         border: 0;
-        border-radius: 8px;
+        border-radius: 10px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
         transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-        animation: slideTogather 1.5s cubic-bezier(.4, 0, .2, 1), _collapse 1.5s cubic-bezier(0, 0, .2, 1);
+        animation: slideTogather 800ms cubic-bezier(.4, 0, .2, 1), _collapse 800ms cubic-bezier(0, 0, .2, 1);
+        z-index: 1;
     }
-    .projectBox:hover{
+    .projectBox:hover {
         box-shadow: 0px 4px 15px rgba(0, 0, 0, .5);
     }
-    .projectBox:active{
+    .projectBox:active {
         background-color: rgb(62, 129, 240);
         box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
     }
-    .projectDescriptionBox{
+    .projectBox.Status {
+        position: relative;
+        top: -25px;
+        right: -50%;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(255, 0, 0, 1);
+        border-radius: 100px;
+        text-align: center;
+        animation: none;
+        font-family: "Segoe UI";
+        font-size: 1em;
+        font-weight: bold;
+        color: white;
+        transform: scale(0);
+        transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+        z-index: 2;
+    }
+    .projectBox:hover > .projectBox.Status {
+        transform: scale(1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, .5);
+    }
+    .projectBox:active > .projectBox.Status {
+        transform: scale(.9);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    }
+    .projectDescriptionBox {
         position: relative;
         margin: auto;
         text-align: center;
-        padding-bottom: 6px;
-        top: 0em;
+        padding-bottom: 0px;
+        top: -25px;
         width: 90%;
     }
-    #ProjectTitle{
+    #ProjectTitle {
         position: relative;
         color: white;
         font-size: 2em;
-        font-family: Segoe UI Semilight;
+        font-family: "Segoe UI Semilight", "Segoe UI";
     }
-    #ProjectDescription{
+    _:-moz-tree-row(hover), #ProjectTitle { /* Firefox support */
+        font-weight: 300;
+    }
+    #ProjectDescription {
         position: relative;
         color: white;
         font-size: 1em;
-        font-family: Segoe UI Light;
-    }
-    .projectIconBox{
+        font-family: "Segoe UI Light", "Segoe UI";
+    }    
+    .projectIconBox {
         position: relative;
         text-align: center;
         padding-top: 6px;
+        top: -40px;
     }
-    .feedbackBox{
+    .feedbackBox {
         position: fixed;
         width: 200px;
-        right: 0em;
-        bottom: 1em;
+        right: 0px;
+        bottom: 20px;
     }
-    .feedback{
+    .feedback {
         position: relative;
         display: block;
         cursor: pointer;
         margin-top: 1em;
-        left: 50%;        
+        left: 60%;        
         border-radius: 100px;
         border: 0em;
-        width: 5em;
-        height: 5em;
+        width: 4em;
+        height: 4em;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
         transition: all 200ms cubic-bezier(.4, 0, .2, 1);
     }
-    .feedback.VK{
+    .feedback.VK {
         background: url("../images/Social/VK.png"); 
-        background-size: 5em 5em; 
+        background-size: 4em 4em; 
         background-color: rgb(80, 114, 153);
 
         animation: showUp 500ms cubic-bezier(0, 0, .2, 1) 1.5s;
         animation-fill-mode: backwards;
     }
-    .feedback.In{
+    .feedback.In {
         background: url(../images/Social/LinkedIn.png);
-        background-size: 5em 5em; 
+        background-size: 4em 4em; 
         background-color: rgb(28, 135, 189);
 
         animation: showUp 500ms cubic-bezier(0, 0, .2, 1) 1.6s;
         animation-fill-mode: backwards;
     }
-    .feedback.Email{
+    .feedback.Email {
         background: url("../images/Social/Email.png"); 
-        background-size: 5em 5em; 
+        background-size: 4em 4em; 
         background-color: rgb(39, 136, 197);
 
         animation: showUp 500ms cubic-bezier(0, 0, .2, 1) 1.7s;
         animation-fill-mode: backwards;
     }
-    .feedback:hover{
+    .feedback:hover {
         box-shadow: 0px 3px 5px rgba(0, 0, 0, .6);    
     }
-    .feedback:active, .feedback.VK:active, .feedback.In:active, .feedback.Email:active{
+    .feedback:active, .feedback.VK:active, .feedback.In:active, .feedback.Email:active {
         box-shadow: 0px 5px 10px rgba(0, 0, 0, .5); 
-        left: 48%;
-        width: 5.5em;
-        height: 5.5em;
-        background-size: 5.5em 5.5em;
+        left: 55%;
+        width: 5em;
+        height: 5em;
+        background-size: 5em 5em;
     }
     .footer{
         position: relative; 
