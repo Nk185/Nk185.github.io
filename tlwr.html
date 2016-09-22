@@ -1,23 +1,194 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nk's projects</title>
+    <title>TLW Rus redirect</title>
     <meta charset="utf-8">
     <meta name="author" content="Nikita Kalinichenko">
     <link rel="shortcut icon" href="favicon.png">
-    
-    <link rel="stylesheet" type="text/css" href="resources/CSS/common.css">
-    <link rel="stylesheet" type="text/css" href="resources/CSS/commonAnimations.css">
-    <script type="text/javascript" src="resources/JS/common.js"></script>
+
+    <style type="text/css">    
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;            
+        }    
+        #wrapper {                    
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+        .header{
+            position: relative;
+            text-align: center;
+            width: 100%;
+            padding-top: 5%;
+            padding-bottom: 25px;
+        }
+
+        h1{
+            position: relative;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-size: 3em;
+            font-family: "Segoe UI Light", "Segoe UI";
+            color: rgb(50, 50, 50);
+            font-weight: normal;
+        }
+
+        h2{
+            position: relative;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-family: "Segoe UI Light", "Segoe UI";
+            color: rgb(50, 50, 50);
+            font-size: 2em;
+            font-weight: lighter;
+        }
+
+        h3{
+            position: relative;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-family: "Segoe UI Light", "Segoe UI";
+            color: rgb(50, 50, 50);
+            font-size: 1.5em;
+            font-weight: lighter;
+            overflow: hidden;
+        }
+        .message-table-outer{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .message-table-inner-top{
+            position: relative;
+            height: 60%;
+        }
+        .message-table-inner-bottom{
+            display: inline-table;
+            position: relative;
+            visibility: collapse;
+            height: 40%;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            background-color: rgb(242, 242, 242);
+            box-shadow: inset 0 1px 6px rgba(0, 0, 0, .2);
+        }
+        .social{
+            position: relative;
+            display: inline-block;
+            margin-top: 3%;
+            padding-left: 15px;
+            padding-right: 15px;
+            cursor: pointer;
+            transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+        }
+        .social-logo{
+
+            height: 58px;
+            width: 58px;
+            border-radius: 50%;
+            transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+        }
+        .social-logo:hover{
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+        }
+        .social-logo:active{
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+        }
+        .message{
+            position: relative;
+            text-align: center;
+            width: 40%;
+            height: 180px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(247, 247, 247);
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, .5);
+        }
+        .content{
+            position: relative;
+            flex: 1 0 auto;
+        }
+        .footer{
+            position: relative; 
+            width: 100%; 
+            height: 20px;
+            text-align: center;
+            flex: 0 0 auto;
+        }        
+    </style>
 </head>
 <body>
 <div id="wrapper">
     <div class="header">
-        <span>STAY SMOOTH!</span>
+        <img src="https://pp.vk.me/c633219/v633219792/9745/PdIJ0t8y0vQ.jpg">    
+    </div>    
+    <div class="content">
+        <div class="message" id="msg">
+            <div class="message-table-outer">
+                    <div class="message-table-inner-top">
+                        <h1 id="wait-message-caption">STAY SMOOTH</h1>   
+                        <h2 id="wait-message">while we redirecting you</h2>
+                        <h3 id="dist-url"><a id="dist-url-link"></a></h3>
+                    </div>
+                     <div class="message-table-inner-bottom" id="socials">
+                        <div class="social" onclick="window.location.replace('https://vk.com/tlwrus');">
+                            <img class="social-logo" src="resources/images/tlwrSocial/vk.png"> 
+                        </div>
+                        <div class="social" onclick="window.location.replace('https://twitter.com/tlwrus');">
+                            <img class="social-logo" src="resources/images/tlwrSocial/twitter.png"> 
+                        </div>
+                        <div class="social" onclick="window.location.replace('https://www.youtube.com/c/tlwrus');">
+                            <img class="social-logo" src="resources/images/tlwrSocial/youtube.png"> 
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <span style="font-family: Segoe UI; font-size: 0.8em; color: rgb(107, 107, 107);">Design, content and code. &#169; 2016 Nk185.</span>
     </div>
 </div>
+    <script type="text/javascript">
+
+            var urlParams = location.search.split("?");
+
+            if (urlParams != "") {
+                var paramsAndArgs = urlParams[1].split("=");
+
+                if (paramsAndArgs != "" && paramsAndArgs[0] == "redirect" && paramsAndArgs[1] != "") {
+                    document.getElementById("dist-url-link").innerHTML = "to " + paramsAndArgs[1];
+                    document.getElementById("dist-url-link").href = paramsAndArgs[1];
+                    window.location.replace(paramsAndArgs[1]);
+                }
+                else {
+                    document.getElementById("wait-message-caption").innerHTML = "Ops...";
+                    document.getElementById("wait-message").innerHTML = "seems like url was corrupted :(";
+                    document.getElementById("dist-url-link").innerHTML = "mail us if you want";
+                    document.getElementById("dist-url-link").href = 'mailto:theleetworldrus@gmail.com';
+
+                    document.getElementById("msg").style.height = '250px';
+                    document.getElementById("socials").style.visibility = 'visible';
+                }
+
+            }
+            else {
+                document.getElementById("wait-message-caption").innerHTML = "Ops...";
+                document.getElementById("wait-message").innerHTML = "no redirection url was passed :(";
+                document.getElementById("dist-url-link").innerHTML = "mail us if you want";
+                document.getElementById("dist-url-link").href = 'mailto:theleetworldrus@gmail.com';
+
+
+                document.getElementById("msg").style.height = '250px';
+                document.getElementById("socials").style.visibility = 'visible';
+            }
+    </script>
 </body>
 </html>
